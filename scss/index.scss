@@ -1,0 +1,168 @@
+@import "base";
+@import "conmon";
+@import "function";
+@import "fonts";
+
+$p:10px;
+.header{
+  position: relative;
+  right: 0;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  text-align: center;
+  padding: $p;
+  .logo{
+    position: absolute;
+    left: $p;
+    top: $p;
+    bottom: 0;
+    font-size:18px;
+  }
+  .menu{
+    position: absolute;
+    top: 0;
+    right: $p;
+    bottom: 0;
+    span{
+      padding: 0 5px;
+      &:active{
+        background: #eee;
+      }
+    }
+  }
+  .type{
+    text-align: center;
+    overflow: hidden;
+    border-radius: 5px;
+    color: $cde4;
+    border: 1px solid;
+    display: inline-block;
+    a{
+      padding: 5px 10px;
+      font-size: 16px;
+      color: $cde4;
+      &:active,&.active{
+        background: $cde4;
+        color: $cfff;
+      }
+    }
+  }
+}
+
+.banner{
+  position: relative;
+  padding: 0 $p;
+  img{
+    width: 100%;
+  }
+}
+
+.nav{
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0 $p;
+  justify-content: space-around;
+  a{
+    text-align: center;
+  }
+}
+
+.hot,.xs,.ph{
+  padding:20px 10px;
+  background: $cfff;
+  .swiper-slide{
+    padding: 10px 0 0;
+    h3{
+      font-size: 14px;
+      padding: .2em 0;
+      font-weight: 400;
+      line-height: 1.2em;
+    }
+    img{
+      width: 100%;
+    }
+    p{
+      font-size: 12px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+}
+
+.menu{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding: 20px 0;
+  a{
+    flex: 1;
+    align-self: center;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid;
+    border-radius: 10px;
+    margin:0 10px;
+  }
+}
+
+.xs,ph{
+  .more{
+    float: right;
+    color: $c969;
+  }
+  .ic{
+    position: relative;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    em{
+      background: rgba(0,0,255,.7);
+      color: $cfff;
+      padding:0 20px;
+      line-height: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+      transform: translate(-20px,10px) rotate(-45deg);
+      _transform-origin: left top;
+    }
+  }
+}
+
+.ph{
+  ul{
+    display: flex;
+    margin-top: 10px;
+    text-align: center;
+    color: $cde4;
+    border: 1px solid;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 20px;
+    li{
+      flex: 1;
+      padding: 5px;
+      border-right: 1px solid;
+      &:last-child{
+        border: none;
+      }
+      &:active,&.active{
+        color: $cfff;
+        background: $cde4;
+      }
+    }
+  }
+  ol{
+    li{
+      height: 0;
+      overflow: hidden;
+      &.active{
+        height: auto;
+      }
+    }
+  }
+}
